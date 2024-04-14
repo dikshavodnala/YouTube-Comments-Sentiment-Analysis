@@ -32,7 +32,7 @@ def predict():
 
     api_service_name = "youtube"
     api_version = "v3"
-    DEVELOPER_KEY = "AIzaSyCCXaC4Oo28brpUYOwVSStDEZFTahDnBHc"
+    DEVELOPER_KEY = "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
 
     # DEVELOPER_KEY = "ENTER_YOUR_DEVELOPER_KEY"
 
