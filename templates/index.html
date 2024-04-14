@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!--    <link rel="stylesheet" href="/static/styles/style.css">-->
+    <link rel="stylesheet" href="{{url_for('static', filename='styles/style.css') }}">
+    <title>Sentiment Analysis</title>
+</head>
+<body>
+    <div class="class">
+        Youtube Comments Sentiment Analyzer
+    </div>
+
+    <form action="{{url_for('predict')}}" method="post">
+        <div class="container">
+            <label for="name">Enter YouTube URL:</label><br>
+            <input type="text" name="url_name"  placeholder="Enter a valid URL"  required="required"><br>
+            <button type="submit">Analyze Comments</button>
+        </div>
+    </form>
+    <div class="output">
+        <p>{{prediction_text}}</p>
+    </div>
+
+    <h2>Sentiment Analysis Bar Chart</h2>
+    <img src="data:image/png;base64,{{ bar_chart_image }}" alt="Sentiment Analysis Bar Chart">
+
+    <!-- Display Word Cloud -->
+    <h2>Word Cloud</h2>
+    <img src="data:image/png;base64,{{ wordcloud_image }}" alt="Word Cloud">
+
+
+</body>
+</html>
